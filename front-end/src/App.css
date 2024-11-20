@@ -1,0 +1,516 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: white; /* Set link color to white */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.navbar ul li a:hover {
+  background-color: #ff9800; /* Highlight on hover */
+  border-radius: 5px;
+}
+
+.navbar ul li a:active,
+.navbar ul li a:focus {
+  color: white; /* Keep link color white when clicked or focused */
+  background-color: #ff9800; /* Optional: Change background when active */
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.intro {
+  background: url('/public/Scrap-Metal.webp') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.intro h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn, .submit-button, .register-button {
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover, .submit-button:hover, .register-button:hover {
+  background-color: #e68900;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Forms */
+.wrapper, .main-content {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+/* Remember Me */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-forgot label {
+  cursor: pointer;
+}
+
+/* Error Messages */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin-bottom: 10px;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+  }
+
+  .intro p {
+    font-size: 18px;
+  }
+}
+/* Main content styles */
+.main-content {
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Wrapper for form elements */
+.wrapper {
+  max-width: 600px; /* Max width for the form */
+  margin: 0 auto; /* Center the form */
+  background: #fff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Heading style */
+.wrapper h1 {
+  text-align: center; /* Center the heading */
+  color: #333; /* Darker text for better readability */
+}
+
+/* Input group styles */
+.input-group {
+  margin-bottom: 15px; /* Space between input fields */
+}
+
+/* Select box styles */
+.select-box {
+  width: 100%; /* Full width for select box */
+  padding: 10px; /* Padding inside select box */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+}
+
+/* Input field styles */
+input[type="number"], 
+textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside fields */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+}
+
+/* Textarea styles */
+textarea {
+  height: 100px; /* Height for the description field */
+}
+
+/* Button styles */
+.submit-button {
+  background-color: #ff9800; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 15px; /* Padding inside button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-weight: bold; /* Bold text */
+  width: 100%; /* Full width */
+}
+
+/* Button hover effect */
+.submit-button:hover {
+  background-color: #e68a00; /* Darker shade on hover */
+}
+
+/* Error message styles */
+.error-message {
+  color: #ff0000; /* Red color for error messages */
+  font-size: 14px; /* Font size for readability */
+  margin-top: 5px; /* Space above error message */
+}
+
+/* Input focus styles */
+input:focus, 
+textarea:focus, 
+.select-box:focus {
+  outline: none; /* Remove default outline */
+  border-color: #ff9800; /* Change border color on focus */
+}
+/* CSS for Buy Component */
+
+/* Main container styling */
+.job-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.job-list h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Search box styling */
+.search-box {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Job list table-like layout */
+.job-list ul {
+  display: flex;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.job-list ul:first-child {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.job-list ul li {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Buttons styling */
+.typic-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.typic-button:hover {
+  background-color: #45a049;
+}
+
+.typic-button.delete {
+  background-color: #f44336;
+}
+
+.typic-button.delete:hover {
+  background-color: #e53935;
+}
+
+/* Message styling */
+.job-list h1:last-child {
+  text-align: center;
+  color: #888;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .job-list ul {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .job-list ul li {
+    padding: 5px 0;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+}
+
+/* Styles for the Purchase Confirmation Page */
+.confirmation-page {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.confirmation-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+}
+
+.input-group input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #e53935;
+  outline: none;
+}
+
+.typic-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.typic-button:hover {
+  background-color: #e53935;
+}
+
+.typic-button:active {
+  background-color: #e53935;
+}
+
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.admin-dashboard h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-section {
+  margin-bottom: 40px;
+}
+
+.admin-section h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: left;
+  border-bottom: 2px solid #ff9800;
+  padding-bottom: 5px;
+}
+
+.admin-section div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section div p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.admin-section .delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-section .delete-button:hover {
+  background-color: #e53935;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-section div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-section div p {
+    margin-bottom: 10px;
+  }
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
